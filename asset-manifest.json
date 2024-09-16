@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/schnibby-tries-react/static/css/main.fdbf6003.css",
+    "main.js": "/schnibby-tries-react/static/js/main.0faf7fc2.js",
+    "static/js/453.95b5966c.chunk.js": "/schnibby-tries-react/static/js/453.95b5966c.chunk.js",
+    "index.html": "/schnibby-tries-react/index.html",
+    "main.fdbf6003.css.map": "/schnibby-tries-react/static/css/main.fdbf6003.css.map",
+    "main.0faf7fc2.js.map": "/schnibby-tries-react/static/js/main.0faf7fc2.js.map",
+    "453.95b5966c.chunk.js.map": "/schnibby-tries-react/static/js/453.95b5966c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdbf6003.css",
+    "static/js/main.0faf7fc2.js"
+  ]
+}
