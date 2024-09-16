@@ -1,7 +1,7 @@
 import { FormEvent, useState, useEffect, ChangeEvent } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 
-export default function MyForm() {
+export default function Login() {
   const [form, setForm] = useState({ username: "", password: "" });
   //const [username, setUsername] = useState("");
   //const [password, setPassword] = useState("");
