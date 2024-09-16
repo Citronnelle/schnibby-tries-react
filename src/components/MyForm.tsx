@@ -14,7 +14,7 @@ export default function MyForm() {
     //console.log({ username, password });
   };
 
-  const handleChange = (event: ChangeEvent<HTMLFormElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setForm((prevForm) => ({
       ...prevForm,
       [event.target.name]: event.target.value,
@@ -59,14 +59,14 @@ export default function MyForm() {
             label="Username"
             variant="outlined"
             //onChange={(event) => setUsername(event.target.value)}
-            onChange={(event) => handleChange}
+            onChange={handleChange}
           />
           <TextField
             name="password"
             label="Password"
             variant="outlined"
             //onChange={(event) => setPassword(event.target.value)}
-            onChange={(event) => handleChange}
+            onChange={handleChange}
           />
           <Button variant="contained" type="submit">
             Login
