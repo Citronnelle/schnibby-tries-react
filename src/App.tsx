@@ -1,7 +1,7 @@
-import React from "react";
-import "./App.css";
-import MyForm from "./components/Login";
-import MyContainer from "./layout/MyContainer";
+import React from "react"
+import "./App.css"
+import MyForm from "./components/Login"
+import MyContainer from "./layout/MyContainer"
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <MyForm />
       </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
