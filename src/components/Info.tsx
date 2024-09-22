@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { ChangeEvent, FormEvent, useState } from "react"
 import { Box, Button, List, ListItem, TextField } from "@mui/material"
 
 const huviHobiMassiiv = [
@@ -12,14 +12,25 @@ const huviHobiMassiiv = [
   "rotid",
 ]
 
-function saada() {
-  alert("Tahtsid saata, aga pole implementeeritud... :(")
-}
-
 const Info = ({ nimi }: { nimi: string }) => {
+  const [vormiAndmed, maaraVormiAndmed] = useState({ email: "", teade: "" })
+
+  const tootleMuutust = (event: ChangeEvent<HTMLInputElement>) => {
+    maaraVormiAndmed(eelmineVorm => ({
+      ...eelmineVorm,
+      [event.target.name]: event.target.value,
+    }))
+  }
+
+  const tootleSaatmist = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    console.log(vormiAndmed)
+  }
+
   return (
     <>
       <Box sx={{ fontSize: "calc(10px + 2vmin)" }}>{nimi}</Box>
+
       <Box
         sx={{
           display: "flex",
@@ -42,41 +53,48 @@ const Info = ({ nimi }: { nimi: string }) => {
             <ListItem key={huviHobi}>{huviHobi}</ListItem>
           ))}
         </List>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "flex-start",
-            flexDirection: "column",
-            margin: "5px",
-            padding: "5px",
-            height: "100%",
-          }}
-        >
-          <TextField
-            sx={{ marginBottom: "10px" }}
-            id="email"
-            label="E-posti aadress:"
-            type="email"
-            variant="outlined"
-            fullWidth
-          />
-          <TextField
-            sx={{ marginBottom: "10px" }}
-            id="teade"
-            label="Kirja sisu:"
-            multiline
-            rows={4}
-            variant="outlined"
-            fullWidth
-          />
-          <Button
-            sx={{ alignSelf: "flex-end" }}
-            variant="contained"
-            onClick={saada}
+
+        <form onSubmit={tootleSaatmist}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "flex-start",
+              flexDirection: "column",
+              margin: "5px",
+              padding: "5px",
+              height: "100%",
+            }}
           >
-            Saada!
-          </Button>
-        </Box>
+            <TextField
+              sx={{ marginBottom: "10px" }}
+              id="email"
+              name="email"
+              label="E-posti aadress:"
+              type="email"
+              variant="outlined"
+              fullWidth
+              onChange={tootleMuutust}
+            />
+            <TextField
+              sx={{ marginBottom: "10px" }}
+              id="teade"
+              name="teade"
+              label="Kirja sisu:"
+              multiline
+              rows={4}
+              variant="outlined"
+              fullWidth
+              onChange={tootleMuutust}
+            />
+            <Button
+              sx={{ alignSelf: "flex-end" }}
+              type="submit"
+              variant="contained"
+            >
+              Saada!
+            </Button>
+          </Box>
+        </form>
       </Box>
     </>
   )
