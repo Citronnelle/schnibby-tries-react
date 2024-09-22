@@ -9,10 +9,13 @@ import {
 } from "react-router-dom"
 import "./index.css"
 import App from "./App"
+import Info from "./components/Info"
 import MyForm from "./layout/MyForm"
 import reportWebVitals from "./reportWebVitals"
 
 const basePath = process.env.PUBLIC_URL || "/"
+
+let nimi: string = "Taiki-Viia Tungal"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,20 +24,12 @@ const router = createBrowserRouter(
       element={<App />}
     >
       <Route
-        path="/"
-        element={<Navigate to="/" />}
-      />
-      <Route
-        path="form"
+        path="login"
         element={<MyForm />}
       />
       <Route
-        path="extra"
-        element={<h1>Extra</h1>}
-      />
-      <Route
-        path="contact"
-        element={<h1>Contact</h1>}
+        path="form"
+        element={<Info nimi={nimi} />}
       />
     </Route>,
   ),
@@ -51,7 +46,4 @@ root.render(
   </React.StrictMode>,
 )
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals()
