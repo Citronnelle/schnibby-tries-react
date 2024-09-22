@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/schnibby-tries-react/static/css/main.fdbf6003.css",
-    "main.js": "/schnibby-tries-react/static/js/main.1ecc7670.js",
+    "main.css": "/schnibby-tries-react/static/css/main.733e90d4.css",
+    "main.js": "/schnibby-tries-react/static/js/main.0504256d.js",
     "static/js/453.95b5966c.chunk.js": "/schnibby-tries-react/static/js/453.95b5966c.chunk.js",
     "index.html": "/schnibby-tries-react/index.html",
-    "main.fdbf6003.css.map": "/schnibby-tries-react/static/css/main.fdbf6003.css.map",
-    "main.1ecc7670.js.map": "/schnibby-tries-react/static/js/main.1ecc7670.js.map",
+    "main.733e90d4.css.map": "/schnibby-tries-react/static/css/main.733e90d4.css.map",
+    "main.0504256d.js.map": "/schnibby-tries-react/static/js/main.0504256d.js.map",
     "453.95b5966c.chunk.js.map": "/schnibby-tries-react/static/js/453.95b5966c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fdbf6003.css",
-    "static/js/main.1ecc7670.js"
+    "static/css/main.733e90d4.css",
+    "static/js/main.0504256d.js"
   ]
 }
