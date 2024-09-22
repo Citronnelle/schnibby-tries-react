@@ -8,10 +8,11 @@ import {
 } from "react-router-dom"
 import "./index.css"
 import App from "./App"
+import Hello from "./components/Hello"
 import Info from "./components/Info"
 import MyForm from "./layout/MyForm"
+import RandomName from "./components/RandomName"
 import reportWebVitals from "./reportWebVitals"
-import { Box } from "@mui/material"
 
 const basePath = process.env.PUBLIC_URL || "/"
 
@@ -25,7 +26,7 @@ const router = createBrowserRouter(
     >
       <Route
         index
-        element={<Box>Tere!</Box>}
+        element={<Hello nimi={RandomName()} />}
       />
       <Route
         path="login"
