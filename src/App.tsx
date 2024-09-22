@@ -1,14 +1,13 @@
 import React from "react"
-import "./App.css"
-import MyForm from "./components/Login"
-import MyContainer from "./layout/MyContainer"
+import Header from "./components/Header"
+import { Box } from "@mui/material"
 
 function App() {
   return (
     <>
-      <div className="App-content">
-        <MyForm />
-      </div>
+      <Box sx={{ minHeight: "100vh", fontSize: "calc(10px + 1vmin)" }}>
+        <Header />
+      </Box>
     </>
   )
 }
