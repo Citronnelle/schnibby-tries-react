@@ -1,6 +1,7 @@
 {
   "name": "schnibby-tries-react",
   "version": "0.1.0",
+  "homepage": "https://citronnelle.github.io/schnibby-tries-react",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -24,7 +25,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "PUBLIC_URL=https://citronnelle.github.io/schnibby-tries-react react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

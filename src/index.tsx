@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client"
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Navigate,
   Route,
   RouterProvider,
 } from "react-router-dom"
@@ -11,12 +12,18 @@ import App from "./App"
 import MyForm from "./layout/MyForm"
 import reportWebVitals from "./reportWebVitals"
 
+const basePath = process.env.PUBLIC_URL || "/"
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route
-      path="/"
+      path={basePath}
       element={<App />}
     >
+      <Route
+        path={`${basePath}/`}
+        element={<Navigate to="/" />}
+      />
       <Route
         path="form"
         element={<MyForm />}
