@@ -17,11 +17,11 @@ const basePath = process.env.PUBLIC_URL || "/"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route
-      path={basePath}
+      path="/"
       element={<App />}
     >
       <Route
-        path={`${basePath}/`}
+        path="/"
         element={<Navigate to="/" />}
       />
       <Route
@@ -38,6 +38,9 @@ const router = createBrowserRouter(
       />
     </Route>,
   ),
+  {
+    basename: basePath,
+  },
 )
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
