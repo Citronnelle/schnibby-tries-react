@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client"
 import {
   createBrowserRouter,
   createRoutesFromElements,
-  Navigate,
   Route,
   RouterProvider,
 } from "react-router-dom"
@@ -12,6 +11,7 @@ import App from "./App"
 import Info from "./components/Info"
 import MyForm from "./layout/MyForm"
 import reportWebVitals from "./reportWebVitals"
+import { Box } from "@mui/material"
 
 const basePath = process.env.PUBLIC_URL || "/"
 
@@ -23,6 +23,10 @@ const router = createBrowserRouter(
       path="/"
       element={<App />}
     >
+      <Route
+        index
+        element={<Box>Tere!</Box>}
+      />
       <Route
         path="login"
         element={<MyForm />}
